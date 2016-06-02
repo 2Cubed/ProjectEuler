@@ -15,10 +15,6 @@ for problem in SOLVED:
 
     assert end_time - start_time <= 60, "solution took too long to execute"
 
-    assert computed == ANSWERS[str(problem)], """incorrect solution
-  Problem {problem}:
-    Computed: {computed}
-    Correct: {correct}""".format(
-        problem=problem,
-        computed=computed,
-        correct=ANSWERS[str(problem)])
+    answer = ANSWERS[str(problem)]
+    assert computed == answer, "solution {v} (p{n:03d}) is incorrect".format(
+        n=problem, v=computed)
