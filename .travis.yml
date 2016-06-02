@@ -1,0 +1,13 @@
+language: python
+python:
+  - "3.4"
+  - "3.5"
+install:
+  - pip install flake8
+  - pip install pylint
+before_script:
+  - flake8 .
+  - pylint euler
+script:
+  - nosetests
+  - python test_solutions.py
