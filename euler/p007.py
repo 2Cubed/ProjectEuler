@@ -8,8 +8,8 @@ INDEX = 10001
 def compute(index=INDEX):
     """Find the `index`th prime number."""
 
-    primes = list()
-    test_number = 2
+    primes = [2]
+    test_number = 3
 
     while len(primes) < index:
         for prime in primes:
@@ -17,6 +17,6 @@ def compute(index=INDEX):
                 break
         else:
             primes.append(test_number)
-        test_number += 1
+        test_number += 2
 
     return primes[-1]
